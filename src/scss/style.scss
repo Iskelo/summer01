@@ -1,0 +1,19 @@
+@import "fonts";
+@import "reset";
+@import "header";
+@import "hero";
+@import "letsgo";
+@import "discont";
+@import "hiking";
+@import "explore";
+@import "about";
+
+body {
+	display: block;
+	font-family: OpenSans;
+	background-color: grey;
+}
+.container {
+	width: 1320px;
+	margin: 0 auto;
+}

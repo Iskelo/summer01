@@ -1,0 +1,34 @@
+.hiking {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	.hiking__imgup {
+		background-image: url("../img/header/Shape.png");
+		height: 192px;
+	}
+	.hiking__content {
+		text-align: center;
+		color: #fff;
+		padding-top: 166px;
+		.hiking__title {
+			font-size: 58px;
+			font-weight: bold;
+		}
+		.hiking__text {
+			padding-top: 42px;
+			margin: 0 auto;
+			max-width: 922px;
+			font-size: 30px;
+			line-height: 1.2;
+			margin-bottom: 145px;
+		}
+	}
+	.hiking__shadow {
+		position: absolute;
+		top: 160px;
+	}
+	.hiking__imgdown {
+		background-image: url("../img/center.png");
+		height: 323px;
+	}
+}

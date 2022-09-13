@@ -1,0 +1,50 @@
+.header {
+	display: flex;
+	position: relative;
+	z-index: 10;
+	margin: 0 auto;
+	justify-content: center;
+	background-image: url("../img/header/Shape.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 192px;
+	.nav {
+		.nav__body {
+			display: flex;
+			justify-content: space-between;
+			.logo {
+				padding-top: 30px;
+			}
+			ul {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 200%;
+				a {
+					color: #54524f;
+					transition: 0.3s ease all;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+				color: #54524f;
+				li {
+					.search {
+						width: 183px;
+						height: 51px;
+						border-radius: 50px;
+						display: flex;
+						justify-content: end;
+						align-items: center;
+						img {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

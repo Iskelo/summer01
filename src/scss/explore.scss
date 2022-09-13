@@ -1,0 +1,31 @@
+.explore {
+	// z-index: -1;
+	margin-top: -70px;
+	height: 1115px;
+	background-image: url("../img/explore/explore.png");
+	//background-attachment: fixed;
+	.explore__body {
+		padding-top: 500px;
+		margin-bottom: 300px;
+		display: flex;
+		text-align: right;
+		justify-content: flex-end;
+		.explore__title {
+			margin-right: 50px;
+			text-transform: uppercase;
+			font-size: 75px;
+			color: #deb37e;
+			font-weight: 900;
+			line-height: 1.2;
+			span {
+				font-size: 83px;
+				color: #54524f;
+				font-weight: 900;
+			}
+		}
+	}
+
+	.explore__down {
+		width: 100%;
+	}
+}

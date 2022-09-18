@@ -7,6 +7,8 @@
 @import "hiking";
 @import "explore";
 @import "about";
+@import "contact";
+@import "footer";
 
 body {
 	display: block;
@@ -16,4 +18,551 @@ body {
 .container {
 	width: 1320px;
 	margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+	.container {
+		width: 1024px;
+	}
+	.explore .explore__body .explore__title span {
+		font-size: 70px;
+	}
+	.explore .explore__down {
+		display: none;
+	}
+	.letsgo .letsgo__body .letsgo__item {
+		width: 300px;
+		img {
+			object-fit: cover;
+		}
+	}
+	.explore .explore__body {
+		text-align: center;
+		margin-bottom: 440px;
+		.explore__title {
+			margin-right: 0;
+			margin-top: -250px;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.container {
+		width: 740px;
+	}
+	.hero .hero__body .hero__title {
+		font-size: 70px;
+		padding-top: 200px;
+	}
+	.hero .hero__body .hero__text {
+		font-size: 16px;
+		width: 350px;
+	}
+	.letsgo .letsgo__body .letsgo__item {
+		width: 250px;
+		.item__title {
+			padding-top: 30px;
+		}
+		.item__text {
+			padding-bottom: 30px;
+		}
+		img {
+			object-fit: cover;
+		}
+	}
+	.discont .discont__row .discont__element .discont__content {
+		.item__title {
+			font-size: 40px;
+			padding-top: 100px;
+		}
+
+		.item__text {
+			font-size: 26px;
+		}
+	}
+	.about {
+		padding-top: 100px;
+		.about__content h1 {
+			padding-top: 100px;
+		}
+	}
+	.footer {
+		padding-bottom: 100px;
+		padding-top: 100px;
+		.footer__body {
+			flex-direction: column;
+			.footer__right {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 620px;
+	}
+	body.lock {
+		overflow: hidden;
+	}
+	.header {
+		position: fixed;
+	}
+	.header::before {
+		background-color: #fff;
+		height: 50px;
+	}
+	.header__body {
+		height: 50px;
+	}
+	.header__logo {
+		margin-top: -30px;
+		flex: 0 0 40px;
+	}
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+	}
+	.header__burger span {
+		position: absolute;
+		background-color: #000;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger:before,
+	.header__burger:after {
+		content: "";
+		background-color: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger:before {
+		top: 0;
+	}
+	.header__burger:after {
+		bottom: 0;
+	}
+
+	.header__burger.active span {
+		transform: scale(0);
+	}
+
+	.header__burger.active:before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active:after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+
+	.header__menu {
+		position: fixed;
+		top: -150%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		background-color: #fff;
+		padding: 70px 10px 20px 10px;
+		//opacity: 0.5;
+	}
+
+	.header__menu.active {
+		top: 0;
+	}
+
+	.header__list {
+		margin-top: 50px;
+		display: block;
+	}
+	.header__list li {
+		margin: 0px 0px 20px 0px;
+	}
+	.header__link {
+		font-size: 24px;
+		color: #54524f;
+	}
+	.search {
+		margin: 0 auto;
+	}
+
+	.hero {
+		background-position: center;
+		background-size: cover;
+		.hero__body {
+			.hero__title {
+				font-size: 50px;
+				padding-top: 200px;
+			}
+			.hero__subtitle {
+				font-size: 16px;
+			}
+			.hero__btn {
+				font-size: 20px;
+				width: 180px;
+				height: 40px;
+				margin-top: 20px;
+			}
+			.hero__text {
+				padding-top: 20px;
+				font-size: 16px;
+				width: 330px;
+			}
+		}
+	}
+	.letsgo {
+		.letsgo__title {
+			font-size: 45px;
+			padding-top: 0;
+		}
+		.letsgo__subtitle {
+			padding-top: 20px;
+			font-size: 18px;
+			padding-bottom: 30px;
+		}
+		.letsgo__body {
+			flex-direction: column;
+			.letsgo__item {
+				display: flex;
+				width: 100%;
+				margin-bottom: 5px;
+				align-items: center;
+				.item__img img {
+					object-position: center;
+					object-fit: cover;
+				}
+				.item__content {
+					flex: 0 0 50%;
+					.item__text {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	.discont {
+		.discont__row {
+			.discont__element {
+				.discont__content {
+					height: 550px;
+					.up__img {
+						background-position: center;
+						background-size: cover;
+					}
+					.item__title {
+						padding-top: 70px;
+						padding-right: 10px;
+						font-size: 35px;
+					}
+					.item__text {
+						padding-right: 20px;
+						font-size: 20px;
+					}
+					.discont__btn {
+						width: 250px;
+						height: 60px;
+						font-size: 26px;
+					}
+					.down__img {
+						background-position: center;
+						background-size: cover;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	.hiking {
+		.hiking__imgup {
+			height: 120px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.hiking__shadow {
+			margin-top: 100px;
+			img {
+				width: 60%;
+			}
+		}
+		.hiking__content {
+			.hiking__title {
+				font-size: 36px;
+			}
+			.hiking__text {
+				width: 640px;
+				font-size: 22px;
+			}
+		}
+		.hiking__imgdown {
+			height: 130px;
+			background-size: contain;
+		}
+	}
+	.explore {
+		height: 600px;
+		background-position: center;
+		.explore__body {
+			.explore__title {
+				margin-top: -350px;
+				font-size: 55px;
+				text-align: end;
+				span {
+					font-size: 50px;
+				}
+			}
+		}
+	}
+	.about {
+		padding-bottom: 30px;
+		padding-top: 60px;
+		.about__cards .about__item .item__title {
+			font-size: 26px;
+		}
+	}
+	.about .about__shadow img {
+		width: 70%;
+	}
+	.about .about__content {
+		h1 {
+			padding-top: 60px;
+			font-size: 30px;
+		}
+		p {
+			padding-top: 30px;
+			font-size: 18px;
+		}
+	}
+	.contact {
+		form {
+			.contact__input {
+				font-size: 18px;
+				width: 470px;
+				height: 45px;
+			}
+			.contact__sub {
+				font-size: 18px;
+				height: 45px;
+			}
+		}
+		.contact__imgup {
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.contact__content {
+			padding-top: 0;
+			.contact__title {
+				font-size: 45px;
+			}
+			.contact__text {
+				width: 80%;
+				font-size: 18px;
+			}
+		}
+		.contact__imgdown {
+			display: none;
+			height: 0;
+		}
+	}
+	.footer {
+		padding-top: 50px;
+		.footer__body {
+			.footer__left {
+				h1 {
+					font-size: 24px;
+				}
+				p {
+					font-size: 16px;
+				}
+				.footer__icons {
+					gap: 8px;
+					a img {
+						width: 80%;
+					}
+				}
+			}
+			.footer__right {
+				justify-content: space-around;
+				.footer__item {
+					h1 {
+						font-size: 24px;
+					}
+					ul li {
+						padding-bottom: 10px;
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 640px) {
+	.container {
+		width: 480px;
+	}
+	.hiking .hiking__content .hiking__text {
+		width: auto;
+	}
+	.discont .discont__row .discont__element .discont__content {
+		.discont__btn {
+			width: 151px;
+			height: 40px;
+			font-size: 16px;
+		}
+	}
+	.about .about__cards {
+		flex-direction: column;
+		.about__item {
+			padding-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 560px) {
+	.contact form .contact__input {
+		width: 350px;
+	}
+	.discont .discont__row .discont__element .discont__content .item__text {
+		padding-bottom: 15px;
+	}
+	.letsgo .shadow {
+		display: none;
+	}
+}
+@media (max-width: 520px) {
+	.container {
+		width: 420px;
+	}
+	.footer .footer__body .footer__left p {
+		width: 420px;
+	}
+	.discont .discont__row .discont__element .discont__content {
+		height: 400px;
+		.item__title {
+			font-size: 24px;
+		}
+		.item__text {
+			font-size: 14px;
+		}
+	}
+	.hiking {
+		.hiking__content {
+			padding-top: 0;
+			.hiking__text {
+				margin-bottom: 50px;
+			}
+		}
+		.hiking__shadow {
+			margin-top: 20px;
+			img {
+				width: 40%;
+			}
+		}
+	}
+	.about .about__shadow img {
+		width: 40%;
+	}
+	.letsgo .letsgo__body .letsgo__item .item__img {
+		//width: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.discont .discont__row .discont__element .discont__content {
+		.up__img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.hiking .hiking__imgdown {
+		height: 100px;
+	}
+}
+@media (max-width: 425px) {
+	.container {
+		width: 370px;
+	}
+	.footer .footer__body .footer__left p {
+		width: 370px;
+	}
+	.letsgo .letsgo__btn {
+		margin-bottom: 50px;
+		margin-top: 30px;
+		width: 200px;
+		height: 50px;
+		font-size: 16px;
+	}
+	.contact form {
+		.contact__input {
+			width: 280px;
+		}
+		.contact__sub {
+			padding: 0 25px;
+		}
+	}
+	.hiking .hiking__imgdown {
+		padding-top: 0;
+		height: 70px;
+	}
+	.explore {
+		height: 400px;
+		margin-top: -40px;
+		.explore__body .explore__title {
+			margin-top: -430px;
+			font-size: 30px;
+			span {
+				font-size: 30px;
+			}
+		}
+	}
+}
+@media (max-width: 375px) {
+	.container {
+		width: 310px;
+	}
+	.footer .footer__body .footer__left p {
+		width: 290px;
+	}
+	.letsgo .letsgo__body .letsgo__item {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 375px) {
+	.explore {
+		background-size: cover;
+	}
+	.hero .hero__body .hero__text {
+		text-shadow: 1px 1px 1px #fff;
+	}
+	.hero .hero__body .hero__title {
+		font-size: 35px;
+	}
+	.about .about__cards .about__item {
+		width: 300px;
+	}
+	.discont .discont__row {
+		flex-direction: column;
+	}
+	.hero .hero__body .hero__text {
+		width: 300px;
+	}
 }
